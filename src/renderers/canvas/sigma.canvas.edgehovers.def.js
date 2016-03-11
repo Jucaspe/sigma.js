@@ -53,5 +53,14 @@
       target[prefix + 'y']
     );
     context.stroke();
+
+
+      //    Paint edge Label - JCP
+      (
+          sigma.canvas.edgehovers.labels[target.type] ||
+          sigma.canvas.edgehovers.labels.def
+      ) (
+          edge, source, target, context, settings
+      );
   };
 })();
